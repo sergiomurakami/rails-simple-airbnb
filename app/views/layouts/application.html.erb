@@ -4,11 +4,45 @@
     <title>RailsSimpleAirbnb</title>
     <%= csrf_meta_tags %>
 
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="usciISwyJ8NE5lkAEerxNLc8V3YyeUDnkNQTqJqMgHFZc65Vgjx8tTRkBTiYY1YlMWCsyOM9imjBF2H5BVcFOA==">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="/assets/application-6502403468dfbc20a08319e14cf02150d3c5cadebcd825473006e83ddf10c24e.css" data-turbolinks-track="reload">
+    <script src="/assets/application-dcfb333542166c7e176ac13945f5c27350627b932d212a870a5a112daf6d4db9.js" data-turbolinks-track="reload"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body cz-shortcut-listen="true">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Simple Airbnb</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="ml-auto flex">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search" value="">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <a class="btn btn-outline-primary my-2 my-sm-0 ml-2" href="/flats/new">Add Flat</a>
+        </div>
+      </div>
+    </nav>
+
     <%= yield %>
+
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
